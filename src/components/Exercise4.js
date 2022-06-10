@@ -33,7 +33,7 @@ export default function Exercise4() {
 			<h2>Exercise 4</h2>
 			<button
 				onClick={() => {
-					fetchExercise4('62a2f846abf2723285f77b81');
+					fetchExercise4('62a1faf7a78c6cef7fe278ad');
 				}}
 			>
 				Delete user via API
