@@ -1,10 +1,13 @@
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 const ListItem = ({user}) => {
 	return (
 		<ListContainer>
 			<p>{user.name}</p>
-			<button>Details</button>
+			<button>
+				<Link to={`/users/${user._id}`}>Details</Link>
+			</button>
 		</ListContainer>
 	);
 };
@@ -22,5 +25,11 @@ const ListContainer = styled.section`
 
 	button {
 		height: min(100% - 2em);
+		text-decoration: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: gray;
 	}
 `;

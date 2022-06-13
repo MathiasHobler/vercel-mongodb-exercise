@@ -5,3 +5,5 @@ export {default as Exercise2} from './Exercise2';
 export {default as Exercise3} from './Exercise3';
 export {default as Exercise4} from './Exercise4';
 export {default as ListItem} from './ListItem';
+export {default as Details} from './Details';
+export {default as EditUser} from './EditUser';

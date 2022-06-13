@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import connectToMongodb from '../../backend/db/connect-to-mongodb';
 import User from '../../backend/models/User';
 
@@ -12,6 +13,10 @@ export default async function handler(request, response) {
 			return response.status(200).json({data: user});
 		case 'DELETE':
 			await User.findByIdAndRemove(userId);
+			return response.status(200).json({data: user});
+		case 'PUT':
+			const newUser = new User(request.body);
+			await User.findByIdAndUpdate(userId, newUser);
 			return response.status(200).json({data: user});
 		default:
 			return response.status(403).json({message: 'Error: request method not allowed.'});
