@@ -12,10 +12,6 @@ const EditUser = ({user}) => {
 		age: user.age,
 	});
 
-	// useEffect(() => {
-	// 	console.log(editUser);
-	// }, [editUser]);
-
 	async function updateUser(id, data) {
 		fetch(`/api/users/${id}`, {
 			method: 'PUT',
@@ -91,8 +87,6 @@ const EditUser = ({user}) => {
 		</EditUserContainer>
 	);
 };
-
-// onClick={() => setUserEdited(!userEdited)}
 
 export default EditUser;
 

@@ -9,7 +9,7 @@ const Details = () => {
 	const [userExist, setUserExist] = useState(true);
 	const [editUser, setEditUser] = useState(false);
 	const params = useParams();
-	console.log(useLocation());
+	// console.log(useLocation());
 
 	useEffect(() => {
 		readUser(params.userId);
